@@ -104,6 +104,7 @@ function createConnection() {
 socket.on('chat', function(message) {
   console.log(message);
   $('#chat').append("<span style='color:red;padding-left: 5px;'>" + message.user + "</spna>: " + message.msg + "</br>");
+  $("#chat").scrollTop($("#chat")[0].scrollHeight);
 });
 
 $('#msg').keypress(function(e) { // text written
